@@ -3,11 +3,11 @@ export{};
 let args = process.argv.slice(2);
 let input = Number(args[0]);
 
-const fizz = (input:number)=>{
+const fizz = (input:number):void=>{
     
     if(input <=0  || isNaN(input)){
         // console.log("Invalid input");
-        process.exit(1);
+       return;
     }
 
     for(let i = 1;i<=input;i++){
