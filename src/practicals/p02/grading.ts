@@ -2,7 +2,7 @@
 let args = process.argv.slice(2);
 let input = Number(args[0]);
 
-const grade = ():void=>{
+const grade = (input:number):void=>{
     if(input <0 || input >100 || isNaN(input)){
         console.log("Invalid input");
         return;
@@ -23,3 +23,4 @@ const grade = ():void=>{
         console.log("Grade is F");
     }
 }
+grade(input);
