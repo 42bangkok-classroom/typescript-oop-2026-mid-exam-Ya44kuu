@@ -4,7 +4,7 @@ let input = Number(args[0]);
 
 if(input <0 || input >100 || isNaN(input)){
     console.log("Invalid input");
-    process.exit();
+    process.exit(1);
 }
 
 if(input  >= 80){

@@ -5,7 +5,7 @@ let input = Number(args[0]);
 
 if(input <=0  || isNaN(input)){
     // console.log("Invalid input");
-    process.exit();
+    process.exit(1);
 }
 
 for(let i = 1;i<=input;i++){
