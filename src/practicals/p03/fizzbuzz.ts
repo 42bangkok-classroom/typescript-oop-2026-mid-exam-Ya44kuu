@@ -19,7 +19,7 @@ const fizz = (input:number):void=>{
         }else if(i%5 === 0){
             console.log("Buzz");
         }else{
-            console.log(String(i));
+            console.log(i);
         }
     }
 }
