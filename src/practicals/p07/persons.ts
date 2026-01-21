@@ -1,5 +1,5 @@
 interface Person {
-  firstName?: string;
+  firstName: string;
   lastName?: string;
   age?: number;
 }
@@ -11,7 +11,7 @@ const persons: Person[] = [
   { firstName: "Somchai", lastName: "Dee", age: 25 },
   { firstName: "John", lastName: "Doe", age: 150 },
   { firstName: "Jane", lastName: "Smith", age: -5 },
-  { lastName: "NoName", age: 40 }
+
 ];
 
 const test = (input:any) =>{
@@ -34,8 +34,10 @@ export function sortPersons(persons: Person[]): Person[] {
       n+=1;
     }
   }
-  const sortedKeys = Object.keys(tmp).sort();
+  const sortedByNameAsc = [...tmp].sort((a, b) => a.firstName.localeCompare(b.firstName));
+ 
+  console.log(sortedByNameAsc.map(u => u.firstName)); 
+
   return tmp;
 }
-console.log(sortPersons(persons));
-
+sortPersons(persons);
